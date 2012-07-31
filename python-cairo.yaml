@@ -1,0 +1,26 @@
+Name: python-cairo
+Summary: Python bindings for the cairo library
+Version: 1.10.0
+Release: 1
+Group: System/Libraries
+License: MPLv1.1 or LGPLv2
+URL: http://cairographics.org/pycairo
+Sources:
+    - http://cairographics.org/releases/py2cairo-%{version}.tar.bz2
+Description: |
+   %{summary}.
+
+PkgBR:
+    - python-devel
+PkgConfigBR:
+    - cairo
+Configure: none
+Builder: none
+
+SubPackages:
+    - Name: devel
+      Summary: Development components for the pycairo library
+      Group: Development/Libraries
+      Description: |
+          %{summary}.
+
