@@ -6,7 +6,7 @@ Summary:    Python bindings for the cairo library
 Version:    1.19.0
 Release:    1
 License:    MPLv1.1 or LGPLv2
-URL:        https://pycairo.readthedocs.io/en/latest/
+URL:        https://github.com/sailfishos/python-cairo
 Source0:    %{name}-%{version}.tar.bz2
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  python3-devel
