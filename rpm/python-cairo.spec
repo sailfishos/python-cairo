@@ -3,7 +3,7 @@
 
 Name:       python3-cairo
 Summary:    Python bindings for the cairo library
-Version:    1.19.0
+Version:    1.26.1
 Release:    1
 License:    MPLv1.1 or LGPLv2
 URL:        https://github.com/sailfishos/python-cairo
@@ -27,20 +27,17 @@ Obsoletes:  python-cairo-devel < %{version}
 %setup -q -n %{name}-%{version}/pycairo
 
 %build
-python3 ./setup.py build
+%py3_build
 
 %install
-rm -rf %{buildroot}
-python3 ./setup.py install --skip-build --root %{buildroot}
+%py3_install
 
 %files
-%defattr(-,root,root,-)
 %license COPYING*
 %{python3_sitearch}/cairo
 %{python3_sitearch}/pycairo*.egg-info
 
 %files devel
-%defattr(-,root,root,-)
 %dir %{_includedir}/pycairo
 %{_includedir}/pycairo/py3cairo.h
 %{_libdir}/pkgconfig/py3cairo.pc
