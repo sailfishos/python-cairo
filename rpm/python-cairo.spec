@@ -1,6 +1,3 @@
-# fixme: should be defined in base system side
-%define python3_sitearch %(%{__python3} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")
-
 Name:       python3-cairo
 Summary:    Python bindings for the cairo library
 Version:    1.26.1
@@ -30,6 +27,7 @@ Obsoletes:  python-cairo-devel < %{version}
 %py3_build
 
 %install
+%define py_setup_args install_pkgconfig --pkgconfigdir=%{_libdir}/pkgconfig
 %py3_install
 
 %files
